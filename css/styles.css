@@ -138,8 +138,9 @@ margin: 0 auto;
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/hero-img.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 1440px 600px;
+    background-position: center;
+    max-width: 1440px;
+    background-size: cover;
 }
 .hero-title {
     font-weight: 700;
@@ -165,6 +166,7 @@ margin: 0 auto;
     border: none;
     border-radius: 4px;
     margin: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover {
     background-color: #404BBF;
