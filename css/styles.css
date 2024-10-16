@@ -24,6 +24,8 @@ address {font-style: normal;}
 
 button {cursor: pointer;}
 
+.icon {fill: none;}
+
 .container {
 max-width: 1158px;
 padding: 0 15px;
@@ -42,6 +44,7 @@ margin: 0 auto;
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-logo {
@@ -72,17 +75,33 @@ margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 40px;
-    p
 }
+
 .nav-link {
     display: block;
     color: #2e2f42;
     padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link:hover {
-    color: #404BBF;
+
+.nav-link.current {
+ position: relative;
 }
-.nav-link:focus {
+
+.nav-link.current::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: #404BBF;
+    border-radius: 2px;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.current {
     color: #404BBF;
 }
 
@@ -104,12 +123,10 @@ margin: 0 auto;
     display: block;
     color: #434455;
     padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts-link:hover {
+.contacts-link:hover, .contacts-link:focus {
     color: #404BBF;
-}
-.contacts-link:focus {
-    color: #404bbf;
 }
 
 /* Hero 1 */
@@ -117,6 +134,12 @@ margin: 0 auto;
 .hero {
     background-color: #2e2f42;
     padding: 188px 0 188px;
+    background-image: 
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1440px 600px;
 }
 .hero-title {
     font-weight: 700;
