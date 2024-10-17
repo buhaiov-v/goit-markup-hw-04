@@ -24,8 +24,6 @@ address {font-style: normal;}
 
 button {cursor: pointer;}
 
-.icon {fill: none;}
-
 .container {
 max-width: 1158px;
 padding: 0 15px;
@@ -288,6 +286,10 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 .our-team-list-soc-a:focus,
 .our-team-list-soc-a:hover {
     background-color: #404bbf;
+}
+
+.our-team-list-soc-svg {
+    fill: #f4f4fd;
 }
 
 .our-team-list-title {
