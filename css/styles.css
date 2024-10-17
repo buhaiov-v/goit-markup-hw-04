@@ -407,7 +407,7 @@ padding: 100px 0;
 
 .footer-container {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 .footer-logo-p {
